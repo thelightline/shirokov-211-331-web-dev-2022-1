@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/free-icon-contact-form-5312426.png" type="image/png">
+    <title>Форма обратной связи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="form">
+        <h1 class="h1-form">Форма обратной связи</h1>
+
+        <form class="form2" method="post" action="https://httpbin.org/post" enctype="multipart/form-data">
+
+            <input type="hidden" name="user_id" value="1">
+
+            <div class="padding-form">
+                <label for="fio">ФИО</label><br>
+                <input type="text" name="fio" id="fio" placeholder="Введите ФИО">
+            </div>
+
+            <div class="padding-form">
+                <label for="email">Адрес электронной почты</label><br>
+                <input type="email" name="email" id="email" placeholder="Введите Email" required>
+            </div>
+
+            <fieldset class="padding-form">
+                <legend>Откуда вы узнали о нас?</legend>
+
+                <div>
+                    <input type="radio" id="friends" name="source" value="friends" checked>
+                    <label for="friends">Рассказали друзья</label>
+                </div>
+
+                <div>
+                    <input type="radio" id="internet" name="source" value="internet">
+                    <label for="internet">Реклама в интернете</label>
+                </div>
+            </fieldset>
+
+            <div class="padding-form">
+                <label for="category">Тип обращения</label><br>
+                <select name="category_id" id="category">
+                    <option value="1" selected>Жалоба</option>
+                    <option value="2">Предложение</option>
+                </select>
+            </div>
+
+            <div class="padding-form">
+                <label for="text">Текст сообщения</label><br>
+                <textarea name="text" id="text" placeholder="Введите текс обращения" cols="50" rows="5" required></textarea>
+            </div>
+
+            <div class="padding-form">
+                <label for="attachment">Вложение</label><br>
+                <input type="file" name="attachment" id="attachment">
+            </div>
+
+            <div class="padding-form">
+                <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                <label for="agreement">Согласен с обработкой персональных данных</label>
+            </div>
+
+            <button class="btn-post" type="submit">Отправить</button>
+
+            <a class="btn-back" href="index.html">Назад</a>
+
+        </form>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/free-icon-contact-form-5312426.png" type="image/png">
+    <title>Аутентификации</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="index">
+    <main class="btn">
+        <h1>Аутентификация</h1>
+
+        <form method="post" action="https://httpbin.org/post" enctype="multipart/form-data">
+
+            <div>
+                <label for="login">Логин</label><br>
+                <input type="text" name="login" id="login" placeholder="Введите логин" required>
+            </div>
+
+            <div>
+                <label for="password">Пароль</label><br>
+                <input type="password" name="password" id="password" placeholder="Введите пароль" required>
+            </div>
+
+            <div>
+                <input type="checkbox" name="remember-me" id="remember-me" value="true">
+                <label for="remember-me">Запомнить меня</label>
+            </div>
+
+            <button class="btn-post" type="submit">Отправить</button><br>
+
+            <a class="btn-form" href="form.html">Обратная связь</a>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

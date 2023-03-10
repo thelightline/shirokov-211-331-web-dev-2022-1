@@ -1,0 +1,85 @@
+button {
+    border-radius: 50%;
+}
+
+body,
+main {
+    min-height: 100vh;
+    background-image: url("../images/abstract-uv-ultraviolet-light-composition\ \(2\).jpg");
+    background-size: 100%;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calc-container {
+    background-color: #ab32cd60;
+    width: 300px;
+    height: 278px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.digits {
+    width: 180px;
+}
+
+.other {
+    width: 120px;
+    border-left: 2px solid black;
+}
+
+.digits button {
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.other button {
+    margin: 2px;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+}
+
+.screen {
+    height: 60px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.screen span {
+    font-weight: bold;
+    font-size: 30px;
+    color: bisque;
+    word-wrap: break-word;
+    position: relative;
+    top: 15px;
+}
+
+
+a.button {
+    margin-left: 130px;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 1px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-family: Tahoma;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 100;
+    position: relative;
+    top: 20px;
+    right: 60px;
+}
