@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- добавление стилей и скриптов bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- добавление собственных стилей и скриптов -->
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    <title>Travel</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to bottom right, #360c4e, #a32c68);">
+            <!-- добавлен justify-center чтобы на небольшых экранах навигация выглядела красиво -->
+            <div class="container justify-content-center justify-content-sm-between">
+                <!-- настройка элемента для логотипа и названия компании -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="images/logo.jpg" alt="logo" class="logo">
+                    <div class="ms-3">
+                        <h1><i>Travel</i></h1>
+                        <h4 class="ms-2"><u>Мы контролируем твой маршрут</u></h4>
+                    </div>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="bg py-5"> <!--backgroundcolour p-padding m-margin y-bottom+top x-left+right -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 m-4">
+                      <div class="text-center" id="div_id1">  <!--колонки -->
+                        <h1><strong><u>Мы - Travel</u></strong></h1>
+                      </div>
+                        <div class="py-5">
+                        <p class="text-black text-center"> Как бы вы ни доверяли турагенту, всегда остаются сомнения: вдруг были варианты получше? Мы избавим вас от переживаний. Все параметры путевок на нашем сайте представлены в реальном времени и постоянно обновляются. Всё лучшее — у нас.
+      
+                        </p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center"> <!--флекс боксы -->
+                        <img class="img-thumbnail" class="bg-outline-dark rounded mx-auto d-block" class="img-responsive" width="450"  src="images/logo.jpg" alt="23"> <!-- img -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- достоинство проекта -->
+        <section class="advantages">
+            <div class="container my-4">
+                <div class="text-center">
+                    <h2 class="fs-2">Почему именно мы?</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 my-2">
+                        <div class="advantages-item">
+                            <div class="text-center">
+                                <img src="images/eat.png" alt="icon-low-price.png" class="icon-64">
+                                <p class="fs-3 mt-4">
+                                    <h4>Найдём для вас лучшее питание</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 my-2">
+                        <div class="advantages-item">
+                            <div class="text-center">
+                                <img src="images/fly.png"
+                                    alt="icon-certified-specialist.png" class="icon-64">
+                                <p class="fs-3 mt-4">
+                                    <h4>Предоставим комфортный перелёт</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 my-2">
+                        <div class="advantages-item">
+                            <div class="text-center">
+                                <img src="images/home.png" alt="icon-client.png" class="icon-64">
+                                <p class="fs-3 mt-4">
+                                    <h4>Найдём для вас лучшее место проживания</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 my-2">
+                        <div class="advantages-item">
+                            <div class="text-center">
+                                <img src="images/safty.png" alt="icon-rating.png" class="icon-64">
+                                <p class="fs-3 mt-4">
+                                    <h4>Предоставим страхование перелёта</h4>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- секция доступных маршрутов -->
+        <section class="list-of-walking-routes">
+            <div class="container my-4">
+                <h2 class="text-center ms-5 fs-1 color_2">Доступные маршруты</h2>
+                <form class="row align-items-end text-center py-3 px-3">
+                    <div class="col-12 col-md-6">
+                        <div class="search-field-item color_2">
+                            <span id="label-search-field">Поиск по названию:</span>
+                            <!-- поиск по названию маршрута -->
+                            <input type="text" class="search-field mt-2" placeholder="введите название маршрута">
+                        </div>
+                    </div>
+                    <!-- поиск по достопримечательности -->
+                    <div class="col-12 col-md-6 color_2" >
+                        <span id="selector-search-field">Поиск по достопримечательности:</span>
+                        <select name="landmark-select" id="landmark-select" class="landmark-select form-select mt-2">
+                            <!-- селектор для выбора достопримечательности -->
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                </form>
+                <div class="table-walking-routes">
+                    <!-- таблица с доступными пешеходными маршрутами -->
+                </div>
+                <div class="pagination-bar d-flex justify-content-center py-3">
+                    <!-- Здесь будет располагаться навигация по страницам -->
+                </div>
+            </div>
+        </section>
+        <!-- секция гидов на выбранном маршруте -->
+        <section class="list-of-guides color_2" id="list-of-guides">
+            <div class="container my-4">
+                <h2 class="text-center ms-4 fs-2 color_2">Доступные гиды по маршруту <span class="guides-name-of-route"></span>
+                </h2>
+                <form class="row align-items-end text-center py-3 px-3">
+                    <div class="col-12 col-md-6 justify-content-start">
+                        <span id="selector-language-guides color_2">Выберите предпочтительный язык экскурсии:</span>
+                        <select name="guides-select" id="guides-select" class="guides-select form-select mt-2">
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <span>Опыт работы</span>
+                        <div class="experience-from-to text-center">
+                            <input type="text" class="experience-from" id="experience-from" placeholder="от">
+                            <input type="text" class="experience-to" id="experience-to" placeholder="до">
+                        </div>
+                    </div>
+                </form>
+                <div class="table-guides">
+                    <!-- таблица с гидами -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    
+        
+    <!-- Контейнер для уведомлений -->
+    <div class="alert-container">
+    </div>
+
+    <!-- модальное окно для создания заявки -->
+    <div class="modal fade" id="createRequest" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">
+                        <!-- название модального окна -->
+                        <span class="name-modal">Оформление заявки</span>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- тело модального окна -->
+                    <!-- форма для более удобного взаимодействия модальным окном -->
+                    <form class="needs-validation was-validated">
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label" for="fio-guide">ФИО</label>
+                            <div class="col-md-8">
+                                <input class="form-control-plaintext" type="text" id="fio-guide" name="fio-guide"
+                                    value="" disabled>
+                            </div>
+                            <input type="hidden" name="idGuide" id="idGuide">
+                            <input type="hidden" name="priceGuide" id="priceGuide">
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-md-4 col-form-label" for="route-name">Название маршрута</label>
+                            <div class="col-md-8">
+                                <textarea class="form-control-plaintext" type="text" id="route-name" name="route-name"
+                                    value="" disabled></textarea>
+                            </div>
+                            <input type="hidden" name="idRoute" id="idRoute">
+
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="excursion-date">Дата<br>экскурсии</label>
+                                <input class="form-control" type="date" id="excursion-date" name="excursion-date"
+                                    value="" required>
+                                <small>Дата заявки должна быть больше текущей даты</small>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите дату экскурсии
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="start-time">Время<br>начала</label>
+                                <input class="form-control" type="time" id="start-time" name="start-time" value="09:00"
+                                    step="1800" min="9:00" max="23:00" required>
+                                <small>Экскурсии доступны с 9 до 23 с интервалом в 30 минут</small>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите время экскурсии
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <label class="col-form-label" for="duration">Длительность<br>экскурсии</label>
+                                <select class="form-select" name="duration" id="duration" required>
+                                    <option value="1" selected>1 час</option>
+                                    <option value="2">2 часа</option>
+                                    <option value="3">3 часа</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, выберите длительность экскурсии
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-5 mb-3">
+                                <label class="col-form-label" for="number-of-people">Количество человек</label>
+                                <select class="form-select" name="number-of-people" id="number-of-people" required>
+                                    <option value="1" selected>1 человек</option>
+                                    <option value="2">2 человека</option>
+                                    <option value="3">3 человека</option>
+                                    <option value="4">4 человека</option>
+                                    <option value="5">5 человек</option>
+                                    <option value="6">6 человек</option>
+                                    <option value="7">7 человек</option>
+                                    <option value="8">8 человек</option>
+                                    <option value="9">9 человек</option>
+                                    <option value="2">10 человека</option>
+                                    <option value="3">11 человека</option>
+                                    <option value="4">12 человека</option>
+                                    <option value="5">13 человек</option>
+                                    <option value="6">14 человек</option>
+                                    <option value="7">15 человек</option>
+                                    <option value="8">16 человек</option>
+                                    <option value="9">17 человек</option>
+                                    <option value="6">18 человек</option>
+                                    <option value="7">19 человек</option>
+                                    <option value="8">20 человек</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Пожалуйста, укажите количество человек
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span>Дополнительные опции:</span>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <div class="option-1">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="option-1"
+                                            name="option-1">
+                                        <label class="form-check-label" for="option-1">
+                                            Опция 1
+                                        </label>
+                                    </div>
+                                    <div class="description">Описание опции</div>
+                                    <input class="form-control-plaintext" type="text" value="" id="discount-amount-1"
+                                        name="discount-amount-1" disabled>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6 mb-3">
+                                <div class="option-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="option-2"
+                                            name="option-2">
+                                        <label class="form-check-label" for="option-2">
+                                            Опция 2
+                                        </label>
+                                    </div>
+                                    <div class="description">Описание опции</div>
+                                    <input class="form-control-plaintext" type="text" value="" id="discount-amount-2"
+                                        name="discount-amount-2" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="col-md-4 col-form-label" for="total-cost">Итоговая стоимость:</label>
+                                <div class="col-md-8">
+                                    <input class="form-control-plaintext" type="text" id="total-cost" name="total-cost"
+                                        value="Пожалуйста, заполните все поля" disabled>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <!-- низ модального окна -->
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="buttonCancel">
+                        Отмена
+                    </button>
+                    <!-- data-bs-dismiss="modal" удаляется или добавляется в js, чтобы облегчить управление модальным окном -->
+                    <button type="button" class="btn btn-primary" id="buttonSendRequest">
+                        Отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- добавление шаблона всплывающего уведомления -->
+    <template id="alert-template">
+        <div class="alert-item d-flex justify-content-center">
+            <div class="alert alert-warning alert-dismissible fade show d-flex" role="alert" id="alertSetStyle">
+                <span class="text-alert-item text-center"></span>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+    </template>
+
+    <!-- добавление шаблона таблицы доступных пешеходных маршрутов -->
+    <template id="table-of-walking-routes">
+        <div class="row color_2">
+            <div class="col-12 col-lg-3">
+                <div class="name fs-4">
+                    Название
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="desc fs-4">
+                    Описание
+                </div>
+            </div>
+            <div class="col-12 col-lg-3">
+                <div class="main-object fs-4">
+                    Основные объекты
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="choose fs-4">
+                    Выбрать
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- добавление шаблона таблицы гидов по выбранному маршруту -->
+    <template id="table-of-guides">
+        <div class="row text-center">
+            <div class="col-12 d-flex justify-content-center col-lg-2">
+                <div class="img d-flex justify-content-center fs-4">
+                    Гид
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="name fs-4">
+                    ФИО
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="lang fs-4">
+                    Языки
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="exp fs-4">
+                    Опыт работы
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="price fs-4">
+                    Стоимость услуг в час
+                </div>
+            </div>
+            <div class="col-12 col-lg-2">
+                <div class="choose fs-4">
+                    Выбрать
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <footer class="site-footer m-3">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-4">
+              <h3 class="mb-4" id="div_id3"><strong>Где мы</strong></h3>
+              <p class="mb-4">Ещё больше о нас вы можете узнать позвонив нам по номеру или придя к нам лично!</p>
+              <ul class="list-unstyled ">
+                <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-location"></span></span><span class="">Проспект мира, дом 119, Москва, Российская Федерация</span></li>
+                <li class="d-flex"><span class="mr-3"><span class="icon ion-ios-telephone"></span></span><span class="">+7 (925) 759-13-42</span></li>
+                <li class="d-flex"><span class="mr-3"><span class="icon ion-email"></span></span><span class="">travel.company@gmail.com</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-7 text-center">
+                <div class="border-top text-center">
+                    <p class="text-muted mt-3">&COPY; Широков Матвей</p> 
+                </div>
+            </footer></section> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+
+</html>
