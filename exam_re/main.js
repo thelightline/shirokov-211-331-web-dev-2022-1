@@ -1,5 +1,5 @@
 const DEFAULT_URL = 'http://exam-2023-1-api.std-900.ist.mospolytech.ru/api';
-const API_KEY = '2adc397e-26e9-478b-9894-4a40747d8582';
+const API_KEY = '47c49195-abbe-4f6f-be7b-a9f360371c80';
 
 const PER_PAGE = 10;
 const MAX_TEXT_SELECT_SIZE = 30;
