@@ -253,3 +253,7 @@ button.button {
 #route-name {
     min-height: 100px;
 }
+
+.bradius {
+    border-radius: 10px;
+}
